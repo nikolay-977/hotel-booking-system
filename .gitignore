@@ -1,6 +1,14 @@
 /.idea/
+
+/api-gateway/target/
 /api-gateway/api-gateway.iml
-/booking-service/booking-service.iml
-/eureka-server/eureka-server.iml
+
+/booking-service/target/
 /hotel-service/hotel-service.iml
+
 /eureka-server/target/
+/eureka-server/eureka-server.iml
+
+/hotel-service/target/
+/booking-service/booking-service.iml
+
