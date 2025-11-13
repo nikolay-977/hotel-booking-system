@@ -54,9 +54,7 @@ public class UserService {
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new UserNotFoundException("User not found with ID: " + id));
 
-        // Обновляем только переданные поля
         if (updateDTO.getUsername() != null && !updateDTO.getUsername().isBlank()) {
-            // Проверяем, не занят ли username другим пользователем
             if (userRepository.existsByUsernameAndIdNot(updateDTO.getUsername(), id)) {
                 throw new RuntimeException("Username is already taken");
             }

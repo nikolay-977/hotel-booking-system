@@ -1,7 +1,7 @@
 package com.example.bookingservice.controller;
 
-import com.example.bookingservice.dto.UserUpdateDTO;
 import com.example.bookingservice.dto.UserDTO;
+import com.example.bookingservice.dto.UserUpdateDTO;
 import com.example.bookingservice.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;

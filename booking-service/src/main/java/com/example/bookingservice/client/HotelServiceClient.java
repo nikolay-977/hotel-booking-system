@@ -12,7 +12,8 @@ import java.util.List;
         name = "hotel-service",
         path = "/api/rooms",
         configuration = FeignConfig.class
-)public interface HotelServiceClient {
+)
+public interface HotelServiceClient {
 
     @GetMapping("/recommend")
     List<RoomDTO> getRecommendedRooms();

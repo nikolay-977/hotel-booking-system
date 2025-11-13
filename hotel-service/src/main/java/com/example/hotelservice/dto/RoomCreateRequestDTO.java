@@ -14,7 +14,9 @@ public class RoomCreateRequestDTO {
 
     private Long hotelId;
 
+    @Builder.Default
     private Boolean available = true;
 
+    @Builder.Default
     private Integer timesBooked = 0;
 }

@@ -17,9 +17,6 @@ public interface HotelMapper {
 
     List<Hotel> toEntityList(List<HotelDTO> hotelDTOs);
 
-    /**
-     * Метод для обновления сущности Hotel из DTO
-     */
     default void updateHotelFromDto(HotelDTO hotelDTO, Hotel hotel) {
         if (hotelDTO == null) {
             return;

@@ -1,7 +1,10 @@
 package com.example.bookingservice.service;
 
 import com.example.bookingservice.client.HotelServiceClient;
-import com.example.bookingservice.dto.*;
+import com.example.bookingservice.dto.AvailabilityRequestDTO;
+import com.example.bookingservice.dto.BookingDTO;
+import com.example.bookingservice.dto.BookingRequestDTO;
+import com.example.bookingservice.dto.RoomDTO;
 import com.example.bookingservice.entity.Booking;
 import com.example.bookingservice.entity.User;
 import com.example.bookingservice.exception.BookingConflictException;
@@ -18,7 +21,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
-import java.util.HashSet;
 import java.util.List;
 import java.util.UUID;
 

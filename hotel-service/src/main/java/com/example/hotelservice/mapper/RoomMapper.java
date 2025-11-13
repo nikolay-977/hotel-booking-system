@@ -20,9 +20,6 @@ public interface RoomMapper {
 
     List<Room> toEntityList(List<RoomDTO> roomDTOs);
 
-    /**
-     * Кастомный метод для создания Room из RoomDTO с Hotel
-     */
     default Room toEntityWithHotel(RoomDTO roomDTO, Hotel hotel) {
         if (roomDTO == null || hotel == null) {
             return null;
@@ -33,9 +30,6 @@ public interface RoomMapper {
         return room;
     }
 
-    /**
-     * Метод для обновления сущности Room из DTO
-     */
     default void updateRoomFromDto(RoomDTO roomDTO, Room room) {
         if (roomDTO == null) {
             return;
