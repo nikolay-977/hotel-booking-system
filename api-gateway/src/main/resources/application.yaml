@@ -11,7 +11,7 @@ spring:
         - id: booking-service
           uri: http://localhost:8081
           predicates:
-            - Path=/api/user/**,/api/bookings/**,/api/admin/users/**
+            - Path=/api/user/**,/api/bookings/**,/api/admin/users/**,/booking-swagger/**
           filters:
             - StripPrefix=0
 
@@ -19,7 +19,7 @@ spring:
         - id: hotel-service
           uri: http://localhost:8082
           predicates:
-            - Path=/api/hotels/**,/api/rooms/**
+            - Path=/api/hotels/**,/api/rooms/**,/hotel-swagger/**
           filters:
             - StripPrefix=0
 

@@ -58,3 +58,12 @@ management:
       show-components: always
     info:
       enabled: true
+
+springdoc:
+  api-docs:
+    path: /hotel-swagger/api-docs
+  swagger-ui:
+    path: /hotel-swagger/swagger-ui.html
+    operations-sorter: method
+    tags-sorter: alpha
+  default-produces-media-type: application/json

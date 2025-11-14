@@ -67,4 +67,11 @@ management:
     health:
       show-details: always
 
-
+springdoc:
+  api-docs:
+    path: /booking-swagger/api-docs
+  swagger-ui:
+    path: /booking-swagger/swagger-ui.html
+    operations-sorter: method
+    tags-sorter: alpha
+  default-produces-media-type: application/json

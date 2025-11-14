@@ -29,11 +29,18 @@ public class SecurityConfig {
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(authz -> authz
                         .requestMatchers("/api/user/register", "/api/user/auth").permitAll()
-                        .requestMatchers("/actuator/health", "/h2-console/**").permitAll()
+                        .requestMatchers("/actuator/health").permitAll()
 
                         .requestMatchers("/api/bookings/**").hasRole("USER")
-
                         .requestMatchers("/api/admin/users/**").hasRole("ADMIN")
+
+                        .requestMatchers(
+                                "/booking-swagger/**",
+                                "/swagger-ui/**",
+                                "/v3/api-docs/**",
+                                "/swagger-resources/**",
+                                "/webjars/**"
+                        ).permitAll()
 
                         .anyRequest().authenticated()
                 )
