@@ -84,8 +84,8 @@ mvn spring-boot:run -pl api-gateway
 
 # Как протестировать. Postman env и коллекции для тестирования:
 
-[Hotel Booking Environment.postman_environment.json](postman/Hotel%20Booking%20Environment.postman_environment.json)
-[Hotel Booking System API.postman_collection.json](postman/Hotel%20Booking%20System%20API.postman_collection.json)
+- [Hotel Booking Environment.postman_environment.json](postman/Hotel%20Booking%20Environment.postman_environment.json)
+- [Hotel Booking System API.postman_collection.json](postman/Hotel%20Booking%20System%20API.postman_collection.json)
 
 # Swagger
 
