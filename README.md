@@ -63,24 +63,24 @@ mvn spring-boot:run -pl api-gateway
 /api/hotels/** → Hotel Service.
 
 ### Booking Service
-DELETE /user — удалить пользователя (ADMIN).
-POST /user — создать пользователя (ADMIN).
-PATCH /user — обновить данные пользователя (ADMIN).
-POST /booking — создать бронирование (с выбором или автоподбором комнаты) (USER). В теле запроса параметр autoSelect: true/false (при true поле roomId игнорируется).
-GET /bookings — история бронирований пользователя (USER).
-POST /user/register — зарегистрировать пользователя, сгенерировав токен (USER).
-POST /user/auth — авторизовать пользователя, сгенерировав токен (USER).
-GET /booking/{id} — получить бронирование по id (USER).
-DELETE /booking/{id} — отменить бронирование (USER).
+- DELETE /user — удалить пользователя (ADMIN).
+- POST /user — создать пользователя (ADMIN).
+- PATCH /user — обновить данные пользователя (ADMIN).
+- POST /booking — создать бронирование (с выбором или автоподбором комнаты) (USER). В теле запроса параметр autoSelect: true/false (при true поле roomId игнорируется).
+- GET /bookings — история бронирований пользователя (USER).
+- POST /user/register — зарегистрировать пользователя, сгенерировав токен (USER).
+- POST /user/auth — авторизовать пользователя, сгенерировав токен (USER).
+- GET /booking/{id} — получить бронирование по id (USER).
+- DELETE /booking/{id} — отменить бронирование (USER).
 
 ### Hotel Management Service
-POST /api/hotels — добавить отель (ADMIN).
-POST /api/rooms — добавить номер в отель (ADMIN).
-GET /api/hotels — получить список отелей (USER).
-GET /api/rooms/recommend — получить список рекомендованных номеров (USER) (те же свободные номера, отсортированные по возрастанию times_booked).
-GET /api/rooms — получить список всех свободных номеров (USER) (без специальной сортировки).
-POST /api/rooms/{id}/confirm-availability — подтвердить доступность номера на запрошенные даты (временная блокировка слота на указанный период, используется в шаге согласованности) (INTERNAL).
-POST /api/rooms/{id}/release — компенсирующее действие: снять временную блокировку слота (INTERNAL). Маршрут не публикуется через Gateway.
+- POST /api/hotels — добавить отель (ADMIN).
+- POST /api/rooms — добавить номер в отель (ADMIN).
+- GET /api/hotels — получить список отелей (USER).
+- GET /api/rooms/recommend — получить список рекомендованных номеров (USER) (те же свободные номера, отсортированные по возрастанию times_booked).
+- GET /api/rooms — получить список всех свободных номеров (USER) (без специальной сортировки).
+- POST /api/rooms/{id}/confirm-availability — подтвердить доступность номера на запрошенные даты (временная блокировка слота на указанный период, используется в шаге согласованности) (INTERNAL).
+- POST /api/rooms/{id}/release — компенсирующее действие: снять временную блокировку слота (INTERNAL). Маршрут не публикуется через Gateway.
 
 # Как протестировать. Postman env и коллекции для тестирования:
 
