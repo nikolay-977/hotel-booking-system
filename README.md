@@ -9,7 +9,7 @@
 - Java 17.
 - Spring Boot 3.5.7.
 - Spring Cloud 2025.0.0.
-- Spring Data JPA + H2.
+- Spring Data JPA.
 - Spring Security + JWT.
 - Spring Cloud Eureka (Service Discovery).
 - Spring Cloud Gateway (API Gateway).
