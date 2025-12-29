@@ -22,6 +22,7 @@ public class AuthService {
     private final JwtService jwtService;
     private final PasswordEncoder passwordEncoder;
     private final UserMapper userMapper;
+    private final UserService userService;
 
     public AuthResponseDTO authenticate(AuthRequestDTO request) {
         Optional<User> userOpt = userRepository.findByUsername(request.getUsername());
@@ -42,7 +43,6 @@ public class AuthService {
     }
 
     public AuthResponseDTO register(UserDTO userDTO) {
-        UserService userService = new UserService(userRepository, userMapper, passwordEncoder);
         UserDTO registeredUser = userService.registerUser(userDTO);
 
         User user = userRepository.findById(registeredUser.getId())
